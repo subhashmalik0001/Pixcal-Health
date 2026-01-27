@@ -142,7 +142,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-cloud-white to-white">
+    <div className="min-h-screen">
       <Navigation />
 
       {/* Hero Section */}
@@ -210,7 +210,7 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 sm:py-24 px-4 bg-white">
+      <section className="py-16 sm:py-24 px-4 glass">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             <StatCounter target={45000} label="Lives Assessed" suffix="+" />
@@ -309,7 +309,7 @@ export default function Home() {
               return (
                 <div
                   key={feature.title}
-                  className="p-6 rounded-xl bg-card border border-border hover:shadow-lg hover:border-primary transition-all group"
+                  className="p-6 rounded-xl glass-card border border-border hover:shadow-lg hover:border-primary transition-all group"
                 >
                   <div className="p-3 rounded-lg bg-primary/10 w-fit mb-4 group-hover:bg-primary/20 transition-colors">
                     <Icon className="w-6 h-6 text-primary" />
@@ -328,7 +328,7 @@ export default function Home() {
       </section>
 
       {/* For Different Users */}
-      <section className="py-16 sm:py-24 px-4 bg-white">
+      <section className="py-16 sm:py-24 px-4 glass">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-12 text-center text-balance">
             Built for Everyone
@@ -340,11 +340,10 @@ export default function Home() {
               <button
                 key={key}
                 onClick={() => setActiveTab(key)}
-                className={`px-4 py-2 rounded-lg font-medium transition-all ${
-                  activeTab === key
-                    ? 'bg-primary text-primary-foreground'
-                    : 'text-muted-foreground hover:bg-muted'
-                }`}
+                className={`px-4 py-2 rounded-lg font-medium transition-all ${activeTab === key
+                  ? 'bg-primary text-primary-foreground'
+                  : 'text-muted-foreground hover:bg-muted'
+                  }`}
               >
                 {userTypes[key as keyof typeof userTypes].title}
               </button>
@@ -411,7 +410,7 @@ export default function Home() {
             {testimonials.map((testimonial, idx) => (
               <div
                 key={idx}
-                className="p-8 rounded-2xl bg-white border border-border hover:shadow-lg transition-all"
+                className="p-8 rounded-2xl glass-card border border-border hover:shadow-lg transition-all"
               >
                 <div className="text-4xl mb-4">{testimonial.avatar}</div>
                 <p className="text-foreground italic mb-6">{`"${testimonial.quote}"`}</p>

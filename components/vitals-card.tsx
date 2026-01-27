@@ -23,9 +23,9 @@ export function VitalsCard({
   description,
 }: VitalsCardProps) {
   const statusColors = {
-    green: 'border-green-success bg-green-50',
-    yellow: 'border-amber-warning bg-amber-50',
-    red: 'border-red-critical bg-red-50',
+    green: 'border-green-success/30 bg-green-success/10',
+    yellow: 'border-amber-warning/30 bg-amber-warning/10',
+    red: 'border-red-critical/30 bg-red-critical/10',
   };
 
   const statusBadgeColors = {
@@ -36,11 +36,11 @@ export function VitalsCard({
 
   return (
     <div
-      className={`rounded-2xl border-2 p-6 backdrop-blur-sm transition-all hover:shadow-lg ${statusColors[status]}`}
+      className={`rounded-2xl border-2 p-6 backdrop-blur-md transition-all hover:shadow-lg ${statusColors[status]}`}
     >
       <div className="flex items-start justify-between mb-4">
         <div className="flex items-center gap-3">
-          <div className="p-3 rounded-lg bg-white">
+          <div className="p-3 rounded-lg glass/50">
             {icon}
           </div>
           <div>
